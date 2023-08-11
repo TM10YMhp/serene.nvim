@@ -41,6 +41,7 @@ function M.set_groups()
     SignColumn = {},
     MatchParen = { reverse = true },
     Title = {},
+    WinBar = {},
     Directory = {},
     SpecialKey = {},
     DiffDelete = { ctermfg = "red" },
