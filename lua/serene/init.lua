@@ -7,7 +7,7 @@ function M.set_groups()
     NonText = {},
     Conceal = {},
     Comment = { ctermfg = "gray" },
-    TabLine = {},
+    TabLine = { link = "Comment" },
     TabLineSel = {},
     TabLineFill = { link = "Comment" },
     Constant = {},
