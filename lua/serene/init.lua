@@ -62,6 +62,7 @@ function M.set_groups()
     GitSignsAddInline = { reverse = true },
     GitSignsDeleteInline = { reverse = true },
     MiniJump = { link = "Comment" },
+    MiniTablineVisible = { link = "Comment" },
   }
 
   for group, hl in pairs(groups) do
