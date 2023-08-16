@@ -30,7 +30,7 @@ function M.set_groups()
     CursorLineNr = { link = "Comment" },
     CursorLine = { link = "Comment" },
     FoldColumn = { link = "LineNr" },
-    Folded = { link = "LineNr" },
+    Folded = { link = "Comment" },
     Visual = { reverse = true },
     VisualNOS = { link = "Visual" },
     Pmenu = { reverse = true },
@@ -63,6 +63,8 @@ function M.set_groups()
     GitSignsDeleteInline = { reverse = true },
     MiniJump = { link = "Comment" },
     MiniTablineVisible = { link = "Comment" },
+    MiniJump2dSpot = { link = "Comment" },
+    MiniJump2dSpotAhead = { link = "Comment" },
   }
 
   for group, hl in pairs(groups) do
