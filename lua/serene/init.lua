@@ -65,6 +65,7 @@ function M.set_groups()
     MiniTablineVisible = { link = "Comment" },
     MiniJump2dSpot = { link = "Comment" },
     MiniJump2dSpotAhead = { link = "Comment" },
+    MiniCompletionActiveParameter = { link = "Comment" },
   }
 
   for group, hl in pairs(groups) do
