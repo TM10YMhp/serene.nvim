@@ -18,7 +18,7 @@ function M.set_groups()
     Special = {},
     Underlined = {},
     Ignore = {},
-    Todo = {},
+    Todo = { link = "Comment" },
     WildMenu = {},
     StatusLine = {},
     StatusLineNC = { link = "Comment" },
