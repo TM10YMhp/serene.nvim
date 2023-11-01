@@ -34,7 +34,7 @@ function M.set_groups()
     Visual = { reverse = true },
     VisualNOS = { link = "Visual" },
     Pmenu = { ctermbg = "gray", ctermfg = "black" },
-    PmenuSel = { ctermbg = "black", ctermfg = "gray" },
+    PmenuSel = { ctermbg = "black", ctermfg = "white" },
     PmenuSbar = {},
     PmenuThumb = { reverse = true },
     ColorColumn = { reverse = true },
