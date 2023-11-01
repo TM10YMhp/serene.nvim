@@ -35,7 +35,7 @@ function M.set_groups()
     VisualNOS = { link = "Visual" },
     Pmenu = { ctermbg = "gray", ctermfg = "black" },
     PmenuSel = { ctermbg = "black", ctermfg = "white" },
-    PmenuSbar = { link = "PmenuSel" },
+    PmenuSbar = {},
     PmenuThumb = { link = "Pmenu" },
     ColorColumn = { reverse = true },
     SignColumn = {},
