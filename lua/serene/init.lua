@@ -66,6 +66,7 @@ function M.set_groups()
     MiniJump2dSpot = { link = "Comment" },
     MiniJump2dSpotAhead = { link = "Comment" },
     MiniCompletionActiveParameter = { link = "Comment" },
+    LspSignatureActiveParameter = { link = "Comment" },
   }
 
   for group, hl in pairs(groups) do
