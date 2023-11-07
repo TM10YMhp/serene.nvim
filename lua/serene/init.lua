@@ -54,7 +54,7 @@ function M.set_groups()
     DiagnosticInfo = {},
     DiagnosticHint = {},
     DiagnosticOk = {},
-    TelescopeMatching = { link = "Comment" },
+    TelescopeMatching = { link = "Pmenu" },
     TelescopeSelection = { link = "CursorLine" },
     diffAdded = { link = "DiffAdd" },
     diffRemoved = { link = "DiffDelete" },
