@@ -68,6 +68,7 @@ function M.set_groups()
     MiniJump2dSpotAhead = { link = "Comment" },
     MiniCompletionActiveParameter = { link = "Comment" },
     LspSignatureActiveParameter = { link = "Comment" },
+    MiniTrailspace = { link = "Pmenu" }
   }
 
   for group, hl in pairs(groups) do
