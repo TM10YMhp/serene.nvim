@@ -68,7 +68,20 @@ function M.set_groups()
     MiniJump2dSpotAhead = { link = "Comment" },
     MiniCompletionActiveParameter = { link = "Comment" },
     LspSignatureActiveParameter = { link = "Comment" },
-    MiniTrailspace = { link = "Pmenu" }
+    MiniTrailspace = { link = "Pmenu" },
+    -- nvim-notify
+    NotifyLogTitle = { link = "Comment" },
+    NotifyLogTime = { link = "Comment" },
+    NotifyERRORIcon = { link = "Comment" },
+    NotifyWARNIcon = { link = "Comment" },
+    NotifyINFOIcon = { link = "Comment" },
+    NotifyDEBUGIcon = { link = "Comment" },
+    NotifyTRACEIcon = { link = "Comment" },
+    NotifyERRORTitle = { link = "Comment" },
+    NotifyWARNTitle = { link = "Comment" },
+    NotifyINFOTitle = { link = "Comment" },
+    NotifyDEBUGTitle = { link = "Comment" },
+    NotifyTRACETitle = { link = "Comment" },
   }
 
   for group, hl in pairs(groups) do
