@@ -82,6 +82,10 @@ function M.set_groups()
     NotifyINFOTitle = { link = "Comment" },
     NotifyDEBUGTitle = { link = "Comment" },
     NotifyTRACETitle = { link = "Comment" },
+    -- mini.tabline
+    MiniTablineModifiedCurrent = { link = "Search" },
+    MiniTablineModifiedVisible = { link = "Search" },
+    MiniTablineModifiedHidden = { link = "Pmenu" },
   }
 
   for group, hl in pairs(groups) do
