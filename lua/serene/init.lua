@@ -26,6 +26,7 @@ function M.set_groups()
     StatusLineTermNC = { link = "StatusLineNC" },
     Search = { link = "Visual" },
     IncSearch = { link = "Search" },
+    CurSearch = { link = "Pmenu" },
     LineNr = {},
     CursorLineNr = { link = "Comment" },
     CursorLine = { link = "Comment" },
