@@ -24,9 +24,9 @@ function M.set_groups()
     StatusLineNC = { link = "Comment" },
     StatusLineTerm = { link = "StatusLine" },
     StatusLineTermNC = { link = "StatusLineNC" },
-    Search = { link = "Visual" },
+    Search = { link = "Pmenu" },
     IncSearch = { link = "Search" },
-    CurSearch = { link = "Pmenu" },
+    CurSearch = { ctermbg = "white", ctermfg = "black" },
     LineNr = {},
     CursorLineNr = { link = "Comment" },
     CursorLine = { link = "Comment" },
@@ -84,8 +84,8 @@ function M.set_groups()
     NotifyDEBUGTitle = { link = "Comment" },
     NotifyTRACETitle = { link = "Comment" },
     -- mini.tabline
-    MiniTablineModifiedCurrent = { link = "Search" },
-    MiniTablineModifiedVisible = { link = "Search" },
+    MiniTablineModifiedCurrent = { link = "Visual" },
+    MiniTablineModifiedVisible = { link = "Visual" },
     MiniTablineModifiedHidden = { link = "Pmenu" },
   }
 
