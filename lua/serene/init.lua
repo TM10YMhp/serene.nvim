@@ -46,31 +46,24 @@ function M.set_groups()
     WinBar = {},
     Directory = {},
     SpecialKey = {},
+    -- Diff
     DiffDelete = { ctermfg = "red" },
     DiffAdd = { ctermfg = "green" },
     DiffChange = { ctermfg = "darkred" },
     DiffText = { ctermfg = "red" },
-    DiagnosticError = {},
-    DiagnosticWarn = {},
-    DiagnosticInfo = {},
-    DiagnosticHint = {},
-    DiagnosticOk = {},
-    TelescopeMatching = { link = "Pmenu" },
-    TelescopeSelection = { link = "CursorLine" },
     diffAdded = { link = "DiffAdd" },
     diffRemoved = { link = "DiffDelete" },
+    -- Telescope
+    TelescopeMatching = { link = "Pmenu" },
+    TelescopeSelection = { link = "CursorLine" },
+    -- GitSigns
     GitSignsAddPreview = { link = "DiffAdd" },
     GitSignsDeletePreview = { link = "DiffDelete" },
     GitSignsAddInline = { reverse = true },
     GitSignsDeleteInline = { reverse = true },
-    MiniJump = { link = "Comment" },
-    MiniTablineVisible = { link = "Comment" },
-    MiniJump2dSpot = { link = "Comment" },
-    MiniJump2dSpotAhead = { link = "Comment" },
-    MiniCompletionActiveParameter = { link = "Comment" },
+    -- LspSignature
     LspSignatureActiveParameter = { link = "Comment" },
-    MiniTrailspace = { link = "Pmenu" },
-    -- nvim-notify
+    -- Notify
     NotifyLogTitle = { link = "Comment" },
     NotifyLogTime = { link = "Comment" },
     NotifyERRORIcon = { link = "Comment" },
@@ -83,10 +76,31 @@ function M.set_groups()
     NotifyINFOTitle = { link = "Comment" },
     NotifyDEBUGTitle = { link = "Comment" },
     NotifyTRACETitle = { link = "Comment" },
-    -- mini.tabline
+    -- Mini
+    MiniTrailspace = { link = "Pmenu" },
+
+    MiniJump = { link = "Comment" },
+
+    MiniTablineVisible = { link = "Comment" },
+
+    MiniCompletionActiveParameter = { link = "Comment" },
+
+    MiniJump2dSpot = { link = "Comment" },
+    MiniJump2dSpotAhead = { link = "Comment" },
+
     MiniTablineModifiedCurrent = { link = "Visual" },
     MiniTablineModifiedVisible = { link = "Visual" },
     MiniTablineModifiedHidden = { link = "Pmenu" },
+    -- Diagnostics
+    DiagnosticError = { fg = "white" },
+    DiagnosticWarn  = { fg = "white" },
+    DiagnosticInfo  = { fg = "white" },
+    DiagnosticHint  = { fg = "white" },
+    DiagnosticOk    = {},
+    -- GitGutter
+    GitGutterAdd = { fg = "white" },
+    GitGutterChange = { fg = "white" },
+    GitGutterDelete = { fg = "white" },
   }
 
   for group, hl in pairs(groups) do
