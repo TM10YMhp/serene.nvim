@@ -101,6 +101,8 @@ function M.set_groups()
     GitGutterAdd = { fg = "white" },
     GitGutterChange = { fg = "white" },
     GitGutterDelete = { fg = "white" },
+    -- NvimUfo
+    UfoFoldedBg = { link = "Folded" },
   }
 
   for group, hl in pairs(groups) do
