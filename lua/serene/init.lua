@@ -103,6 +103,13 @@ function M.set_groups()
     GitGutterDelete = { fg = "white" },
     -- NvimUfo
     UfoFoldedBg = { link = "Folded" },
+    -- NvimTree
+    NvimTreeWindowPicker = { link = "Pmenu" },
+    -- NvimWindowPicker
+    WindowPickerStatusLine = { link = "PmenuSel" },
+    WindowPickerStatusLineNC = { link = "Pmenu" },
+    WindowPickerWinBar = { link = "PmenuSel" },
+    WindowPickerWinBarNC = { link = "Pmenu" },
   }
 
   for group, hl in pairs(groups) do
