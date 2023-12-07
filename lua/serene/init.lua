@@ -49,8 +49,8 @@ function M.set_groups()
     -- Diff
     DiffDelete = { ctermfg = "red" },
     DiffAdd = { ctermfg = "green" },
-    DiffChange = { ctermfg = "darkred" },
-    DiffText = { ctermfg = "red" },
+    DiffChange = { ctermfg = "green" },
+    DiffText = { ctermfg = "green", reverse = true },
     diffAdded = { link = "DiffAdd" },
     diffRemoved = { link = "DiffDelete" },
     -- Telescope
