@@ -155,11 +155,15 @@ function M.setup(opts)
 end
 
 function M.load()
+  local next = next
+  local config = next(M.options) == nil and defaults or M.options
+
   if vim.g.colors_name then
     vim.cmd("hi clear")
   end
 
-  vim.o.termguicolors = M.options.termguicolors
+  vim.o.termguicolors = config.termguicolors
+  print(config.termguicolors)
   vim.g.colors_name = "serene"
 
   M.set_groups()
