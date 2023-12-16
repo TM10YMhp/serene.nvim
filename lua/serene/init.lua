@@ -163,7 +163,6 @@ function M.load()
   end
 
   vim.o.termguicolors = config.termguicolors
-  print(config.termguicolors)
   vim.g.colors_name = "serene"
 
   M.set_groups()
