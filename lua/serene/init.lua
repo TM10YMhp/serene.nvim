@@ -110,17 +110,6 @@ function M.set_groups()
     WindowPickerStatusLineNC = { link = "Pmenu" },
     WindowPickerWinBar       = { link = "PmenuSel" },
     WindowPickerWinBarNC     = { link = "Pmenu" },
-    -- Lazy
-    LazyReasonCmd     = { link = "Comment" },
-    LazyReasonEvent   = { link = "Comment" },
-    LazyReasonFt      = { link = "Comment" },
-    LazyReasonImport  = { link = "Comment" },
-    LazyReasonKeys    = { link = "Comment" },
-    LazyReasonPlugin  = { link = "Comment" },
-    LazyReasonRequire = { link = "Comment" },
-    LazyReasonRuntime = {},
-    LazyReasonSource  = { link = "Comment" },
-    LazyReasonStart   = { link = "Comment" },
   }
 
   for group, hl in pairs(groups) do
