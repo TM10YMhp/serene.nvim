@@ -144,12 +144,22 @@ function M.autocmds()
   })
 end
 
+M.options = {}
+
+local defaults = {
+  termguicolors = true,
+}
+
+function M.setup(opts)
+  M.options = vim.tbl_deep_extend("force", defaults, opts or {})
+end
+
 function M.load()
   if vim.g.colors_name then
     vim.cmd("hi clear")
   end
 
-  vim.o.termguicolors = false
+  vim.o.termguicolors = M.options.termguicolors
   vim.g.colors_name = "serene"
 
   M.set_groups()
