@@ -64,18 +64,26 @@ function M.set_groups()
     -- LspSignature
     LspSignatureActiveParameter = { link = "Comment" },
     -- Notify
-    NotifyLogTitle   = { link = "Comment" },
-    NotifyLogTime    = { link = "Comment" },
-    NotifyERRORIcon  = { link = "Comment" },
-    NotifyWARNIcon   = { link = "Comment" },
-    NotifyINFOIcon   = { link = "Comment" },
-    NotifyDEBUGIcon  = { link = "Comment" },
-    NotifyTRACEIcon  = { link = "Comment" },
-    NotifyERRORTitle = { link = "Comment" },
-    NotifyWARNTitle  = { link = "Comment" },
-    NotifyINFOTitle  = { link = "Comment" },
-    NotifyDEBUGTitle = { link = "Comment" },
-    NotifyTRACETitle = { link = "Comment" },
+    NotifyLogTitle    = { link = "Comment" },
+    NotifyLogTime     = { link = "Comment" },
+
+    NotifyERRORIcon   = { link = "DiffDelete" },
+    NotifyWARNIcon    = { link = "DiffChange" },
+    NotifyINFOIcon    = { link = "Comment" },
+    NotifyDEBUGIcon   = { link = "Comment" },
+    NotifyTRACEIcon   = { link = "Comment" },
+
+    NotifyERRORTitle  = { link = "DiffDelete" },
+    NotifyWARNTitle   = { link = "DiffChange" },
+    NotifyINFOTitle   = { link = "Comment" },
+    NotifyDEBUGTitle  = { link = "Comment" },
+    NotifyTRACETitle  = { link = "Comment" },
+
+    NotifyERRORBorder = { link = "DiffDelete" },
+    NotifyWARNBorder  = { link = "DiffChange" },
+    NotifyINFOBorder  = { link = "Comment" },
+    NotifyDEBUGBorder = { link = "Comment" },
+    NotifyTRACEBorder = { link = "Comment" },
     -- Mini
     MiniTrailspace = { link = "Pmenu" },
 
