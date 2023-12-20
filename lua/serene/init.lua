@@ -68,19 +68,19 @@ function M.set_groups()
     NotifyLogTime     = { link = "Comment" },
 
     NotifyERRORIcon   = { link = "DiffDelete" },
-    NotifyWARNIcon    = { link = "DiffChange" },
+    NotifyWARNIcon    = { link = "DiffText" },
     NotifyINFOIcon    = { link = "Comment" },
     NotifyDEBUGIcon   = { link = "Comment" },
     NotifyTRACEIcon   = { link = "Comment" },
 
     NotifyERRORTitle  = { link = "DiffDelete" },
-    NotifyWARNTitle   = { link = "DiffChange" },
+    NotifyWARNTitle   = { link = "DiffText" },
     NotifyINFOTitle   = { link = "Comment" },
     NotifyDEBUGTitle  = { link = "Comment" },
     NotifyTRACETitle  = { link = "Comment" },
 
     NotifyERRORBorder = { link = "DiffDelete" },
-    NotifyWARNBorder  = { link = "DiffChange" },
+    NotifyWARNBorder  = { link = "DiffText" },
     NotifyINFOBorder  = { link = "Comment" },
     NotifyDEBUGBorder = { link = "Comment" },
     NotifyTRACEBorder = { link = "Comment" },
