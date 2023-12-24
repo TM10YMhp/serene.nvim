@@ -119,6 +119,15 @@ function M.set_groups()
     WindowPickerStatusLineNC = { link = "Pmenu" },
     WindowPickerWinBar       = { link = "PmenuSel" },
     WindowPickerWinBarNC     = { link = "Pmenu" },
+
+    -- flog
+    flogHash   = { ctermfg = "darkyellow" },
+    flogDate   = { ctermfg = "darkcyan" },
+    flogAuthor = { ctermfg = "darkgreen" },
+
+    -- git
+    gitKeyword = { ctermfg = "darkyellow" },
+    gitHash = { ctermfg = "darkyellow" },
   }
 
   for group, hl in pairs(groups) do
