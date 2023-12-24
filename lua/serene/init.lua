@@ -125,22 +125,6 @@ function M.set_groups()
   end
 end
 
-function M.autocmds()
-  local group = vim.api.nvim_create_augroup("serene", { clear = true })
-
-  vim.api.nvim_create_autocmd("ColorScheme", {
-    group = group,
-    callback = function()
-      if vim.g.colors_name == "serene" then return end
-
-      vim.api.nvim_set_hl(0, "TelescopeSelection", { link = "Visual" })
-      vim.api.nvim_set_hl(0, "TelescopeMatching", { link = "Special" })
-
-      vim.api.nvim_del_augroup_by_id(group)
-    end
-  })
-end
-
 M.options = {}
 
 local defaults = {
@@ -163,8 +147,6 @@ function M.load()
   vim.g.colors_name = "serene"
 
   M.set_groups()
-
-  M.autocmds()
 end
 
 return M
