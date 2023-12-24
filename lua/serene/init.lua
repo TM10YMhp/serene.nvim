@@ -110,6 +110,7 @@ function M.set_groups()
     GitGutterChange = { fg = "white" },
     GitGutterDelete = { fg = "white" },
     -- NvimUfo
+    UfoFoldedFg = { ctermfg = "white", fg = "white" },
     UfoFoldedBg = { link = "Folded" },
     -- NvimTree
     NvimTreeWindowPicker = { link = "Pmenu" },
