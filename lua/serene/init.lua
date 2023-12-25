@@ -4,7 +4,7 @@ function M.set_groups()
   local groups = {
     Normal           = {},
     NormalFloat      = { link    = "Normal" },
-    NonText          = {},
+    NonText          = { ctermfg = "darkgray" },
     Conceal          = {},
     Comment          = { ctermfg = "gray", fg = "gray" },
     TabLine          = { link    = "Comment" },
