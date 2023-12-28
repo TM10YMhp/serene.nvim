@@ -28,7 +28,7 @@ function M.set_groups()
     CurSearch        = { ctermbg = "white", ctermfg = "black", bg = "white", fg = "black" },
     IncSearch        = { link    = "CurSearch" },
     LineNr           = {},
-    CursorLine       = { ctermbg = 236 },
+    CursorLine       = { ctermbg = 234 },
     CursorLineFold   = {},
     CursorLineSign   = {},
     CursorLineNr     = { link = "CursorLine" },
@@ -163,7 +163,10 @@ function M.set_groups()
 
     -- mason
     MasonMutedBlock         = { link    = "Comment" },
-    MasonHighlightBlockBold = { reverse = true }
+    MasonHighlightBlockBold = { reverse = true },
+
+    -- neo-tree
+    NeoTreeCursorLine       = { link = "CursorLine" },
   }
 
   for group, hl in pairs(groups) do
