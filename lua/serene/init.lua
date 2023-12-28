@@ -132,7 +132,10 @@ function M.set_groups()
     gitHash = { ctermfg = "darkyellow" },
 
     -- bufferline
-    BufferLineBackground        = { link = "Comment" },
+    BufferLineBackground   = { link = "Comment" },
+    BufferLineTab          = { link = "Comment" },
+    BufferLineTabSeparator = { link = "Comment" },
+    BufferLineTabSelected  = {},
 
     BufferLineBuffer            = { link = "Comment" },
     BufferLineDuplicate         = { link = "Comment" },
