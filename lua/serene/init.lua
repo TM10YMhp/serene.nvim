@@ -130,7 +130,10 @@ function M.set_groups()
     gitHash = { ctermfg = "darkyellow" },
 
     -- bufferline
-    BufferLineBackground = { link = "Comment" },
+    BufferLineBackground       = { link = "Comment" },
+    BufferLineBufferVisible    = { link = "Comment" },
+    BufferLineDuplicate        = { link = "Comment" },
+    BufferLineDuplicateVisible = { link = "Comment" },
   }
 
   for group, hl in pairs(groups) do
