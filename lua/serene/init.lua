@@ -128,6 +128,9 @@ function M.set_groups()
     -- git
     gitKeyword = { ctermfg = "darkyellow" },
     gitHash = { ctermfg = "darkyellow" },
+
+    -- bufferline
+    BufferLineBackground = { link = "Comment" },
   }
 
   for group, hl in pairs(groups) do
