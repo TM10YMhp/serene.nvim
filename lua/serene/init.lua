@@ -132,10 +132,31 @@ function M.set_groups()
     gitHash = { ctermfg = "darkyellow" },
 
     -- bufferline
-    BufferLineBackground       = { link = "Comment" },
-    BufferLineBufferVisible    = { link = "Comment" },
-    BufferLineDuplicate        = { link = "Comment" },
-    BufferLineDuplicateVisible = { link = "Comment" },
+    BufferLineBackground        = { link = "Comment" },
+
+    BufferLineBuffer            = { link = "Comment" },
+    BufferLineDuplicate         = { link = "Comment" },
+    BufferLineModified          = { link = "Comment" },
+    BufferLineErrorDiagnostic   = { link = "Comment" },
+    BufferLineError             = { link = "Comment" },
+    BufferLineHintDiagnostic    = { link = "Comment" },
+    BufferLineHint              = { link = "Comment" },
+    BufferLineInfoDiagnostic    = { link = "Comment" },
+    BufferLineInfo              = { link = "Comment" },
+    BufferLineWarningDiagnostic = { link = "Comment" },
+    BufferLineWarning           = { link = "Comment" },
+
+    BufferLineBufferVisible            = { link = "Comment" },
+    BufferLineDuplicateVisible         = { link = "Comment" },
+    BufferLineModifiedVisible          = { link = "Comment" },
+    BufferLineErrorDiagnosticVisible   = { link = "Comment" },
+    BufferLineErrorVisible             = { link = "Comment" },
+    BufferLineHintDiagnosticVisible    = { link = "Comment" },
+    BufferLineHintVisible              = { link = "Comment" },
+    BufferLineInfoDiagnosticVisible    = { link = "Comment" },
+    BufferLineInfoVisible              = { link = "Comment" },
+    BufferLineWarningDiagnosticVisible = { link = "Comment" },
+    BufferLineWarningVisible           = { link = "Comment" },
 
     -- mason
     MasonMutedBlock         = { link    = "Comment" },
