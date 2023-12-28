@@ -123,9 +123,13 @@ function M.set_groups()
     WindowPickerWinBarNC     = { link = "Pmenu" },
 
     -- flog
-    flogHash   = { ctermfg = "darkyellow" },
-    flogDate   = { ctermfg = "darkcyan" },
-    flogAuthor = { ctermfg = "darkgreen" },
+    flogHash          = { ctermfg = "darkyellow" },
+    flogDate          = { ctermfg = "darkcyan" },
+    flogAuthor        = { ctermfg = "darkgreen" },
+    flogRef           = { ctermfg = "red" },
+    flogRefHead       = { ctermfg = "cyan" },
+    flogRefHeadArrow  = { ctermfg = "cyan" },
+    flogRefHeadBranch = { ctermfg = "green" },
 
     -- git
     gitKeyword = { ctermfg = "darkyellow" },
