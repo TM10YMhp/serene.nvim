@@ -134,6 +134,10 @@ function M.set_groups()
     BufferLineBufferVisible    = { link = "Comment" },
     BufferLineDuplicate        = { link = "Comment" },
     BufferLineDuplicateVisible = { link = "Comment" },
+
+    -- mason
+    MasonMutedBlock         = { link    = "Comment" },
+    MasonHighlightBlockBold = { reverse = true }
   }
 
   for group, hl in pairs(groups) do
