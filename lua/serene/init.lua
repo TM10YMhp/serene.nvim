@@ -56,8 +56,10 @@ function M.set_groups()
     diffAdded   = { link    = "DiffAdd" },
     diffRemoved = { link    = "DiffDelete" },
     -- Telescope
-    TelescopeMatching  = { link = "Pmenu" },
-    TelescopeSelection = { link = "CursorLine" },
+    TelescopeMatching      = { link = "Pmenu" },
+    TelescopeSelection     = { link = "CursorLine" },
+    TelescopeCounter       = { link = "Normal" },
+    TelescopePromptCounter = { link = "Normal" },
     -- GitSigns
     GitSignsAddPreview    = { link    = "DiffAdd" },
     GitSignsDeletePreview = { link    = "DiffDelete" },
