@@ -34,7 +34,7 @@ function M.set_groups()
     CursorLineNr     = { link = "CursorLine" },
     CursorColumn     = { link = "CursorLine" },
     FoldColumn       = { link    = "LineNr" },
-    Folded           = { link    = "Comment" },
+    Folded           = { link    = "NonText" },
     Visual           = { reverse = true },
     VisualNOS        = { link    = "Visual" },
     Pmenu            = { ctermbg = "gray", ctermfg  = "black", bg = "gray", fg = "black" },
@@ -113,9 +113,13 @@ function M.set_groups()
     GitGutterAdd    = { fg = "white" },
     GitGutterChange = { fg = "white" },
     GitGutterDelete = { fg = "white" },
+
     -- NvimUfo
-    UfoFoldedFg = { ctermfg = "white", fg = "white" },
-    UfoFoldedBg = { link = "Folded" },
+    UfoFoldedFg          = { ctermfg = "white", fg = "white" },
+    UfoFoldedBg          = { link    = "Folded" },
+    UfoFoldedEllipsis    = { link    = "Folded" },
+    UfoPreviewCursorLine = { link    = "CursorLine" },
+
     -- NvimTree
     NvimTreeWindowPicker = { link = "Pmenu" },
     -- NvimWindowPicker
