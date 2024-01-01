@@ -190,6 +190,24 @@ local defaults = {
   termguicolors = true,
 }
 
+function M.autocmds()
+  local group = vim.api.nvim_create_augroup("serene", { clear = true })
+
+  vim.api.nvim_create_autocmd("ColorScheme", {
+    group = group,
+    callback = function()
+      if vim.g.colors_name == "serene" then return end
+
+      vim.api.nvim_set_hl(0, "TelescopeMatching", { link = "Special" })
+      vim.api.nvim_set_hl(0, "TelescopeSelection", { link = "Visual" })
+      vim.api.nvim_set_hl(0, "TelescopeCounter", { link = "NonText" })
+      vim.api.nvim_set_hl(0, "TelescopePromptCounter", { link = "NonText" })
+
+      -- vim.api.nvim_del_augroup_by_id(group)
+    end
+  })
+end
+
 function M.setup(opts)
   M.options = vim.tbl_deep_extend("force", defaults, opts or {})
 end
@@ -206,6 +224,7 @@ function M.load()
   vim.g.colors_name = "serene"
 
   M.set_groups()
+  M.autocmds()
 end
 
 return M
