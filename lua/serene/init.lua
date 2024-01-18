@@ -4,9 +4,9 @@ function M.set_groups()
   local groups = {
     Normal           = {},
     NormalFloat      = { link    = "Normal" },
-    NonText          = { ctermfg = "darkgray" },
+    NonText          = { ctermfg = "darkgray", fg = "gray" },
     Conceal          = {},
-    Comment          = { ctermfg = "gray", fg = "gray" },
+    Comment          = { ctermfg = "gray", fg = "darkgray" },
     TabLine          = { link    = "Comment" },
     TabLineSel       = {},
     TabLineFill      = { link    = "Comment" },
@@ -28,7 +28,7 @@ function M.set_groups()
     CurSearch        = { ctermbg = "white", ctermfg = "black", bg = "white", fg = "black" },
     IncSearch        = { link    = "CurSearch" },
     LineNr           = {},
-    CursorLine       = { ctermbg = 234 },
+    CursorLine       = { ctermbg = 234, bg = "#1c1c1c" },
     CursorLineFold   = {},
     CursorLineSign   = {},
     CursorLineNr     = { link = "CursorLine" },
@@ -37,7 +37,7 @@ function M.set_groups()
     Folded           = { link    = "NonText" },
     Visual           = { reverse = true },
     VisualNOS        = { link    = "Visual" },
-    Pmenu            = { ctermbg = "gray", ctermfg  = "black", bg = "gray", fg = "black" },
+    Pmenu            = { ctermbg = "gray", ctermfg  = "black", bg = "darkgray", fg = "black" },
     PmenuSel         = { ctermbg = "black", ctermfg = "white", bg = "black", fg = "white" },
     PmenuSbar        = {},
     PmenuThumb       = { link    = "Pmenu" },
@@ -104,15 +104,16 @@ function M.set_groups()
     MiniTablineModifiedVisible = { link = "Visual" },
     MiniTablineModifiedHidden  = { link = "Pmenu" },
     -- Diagnostics
-    DiagnosticError = { fg = "white" },
-    DiagnosticWarn  = { fg = "white" },
-    DiagnosticInfo  = { fg = "white" },
-    DiagnosticHint  = { fg = "white" },
+    DiagnosticError = { ctermfg = "white", fg = "white" },
+    DiagnosticWarn  = { ctermfg = "white", fg = "white" },
+    DiagnosticInfo  = { ctermfg = "white", fg = "white" },
+    DiagnosticHint  = { ctermfg = "white", fg = "white" },
     DiagnosticOk    = {},
+
     -- GitGutter
-    GitGutterAdd    = { fg = "white" },
-    GitGutterChange = { fg = "white" },
-    GitGutterDelete = { fg = "white" },
+    GitSignsAdd    = { ctermfg = "white", fg = "white" },
+    GitSignsChange = { ctermfg = "white", fg = "white" },
+    GitSignsDelete = { ctermfg = "white", fg = "white" },
 
     -- NvimUfo
     UfoFoldedFg          = { ctermfg = "white", fg = "white" },
@@ -129,13 +130,13 @@ function M.set_groups()
     WindowPickerWinBarNC     = { link = "Pmenu" },
 
     -- flog
-    flogHash          = { ctermfg = "darkyellow" },
-    flogDate          = { ctermfg = "darkcyan" },
-    flogAuthor        = { ctermfg = "darkgreen" },
-    flogRef           = { ctermfg = "red" },
-    flogRefHead       = { ctermfg = "cyan" },
-    flogRefHeadArrow  = { ctermfg = "cyan" },
-    flogRefHeadBranch = { ctermfg = "green" },
+    flogHash          = { ctermfg = "darkyellow", fg = "darkyellow" },
+    flogDate          = { ctermfg = "darkcyan", fg = "darkcyan" },
+    flogAuthor        = { ctermfg = "darkgreen", fg = "darkgreen" },
+    flogRef           = { ctermfg = "red", fg = "red" },
+    flogRefHead       = { ctermfg = "cyan", fg = "cyan" },
+    flogRefHeadArrow  = { ctermfg = "cyan", fg = "cyan" },
+    flogRefHeadBranch = { ctermfg = "green", fg = "green" },
 
     -- git
     gitKeyword = { ctermfg = "darkyellow" },
@@ -176,7 +177,10 @@ function M.set_groups()
     MasonHighlightBlockBold = { reverse = true },
 
     -- neo-tree
-    NeoTreeCursorLine       = { link = "CursorLine" },
+    NeoTreeCursorLine           = { link = "CursorLine" },
+    NeoTreeTabInactive          = { link = "Comment" },
+    NeoTreeTabSeparatorActive   = { link = "Comment" },
+    NeoTreeTabSeparatorInactive = { link = "Comment" },
   }
 
   for group, hl in pairs(groups) do
