@@ -1,6 +1,7 @@
 local M = {}
 
 function M.set_groups()
+  -- stylua: ignore
   local groups = {
     Normal           = {},
     NormalFloat      = { link    = "Normal" },
@@ -181,6 +182,10 @@ function M.set_groups()
     NeoTreeTabInactive          = { link = "Comment" },
     NeoTreeTabSeparatorActive   = { link = "Comment" },
     NeoTreeTabSeparatorInactive = { link = "Comment" },
+
+    -- flash
+    FlashLabel = { ctermfg = "lightgreen", reverse = true },
+    FlashMatch = { link = "Normal" },
   }
 
   for group, hl in pairs(groups) do
@@ -200,7 +205,9 @@ function M.autocmds()
   vim.api.nvim_create_autocmd("ColorScheme", {
     group = group,
     callback = function()
-      if vim.g.colors_name == "serene" then return end
+      if vim.g.colors_name == "serene" then
+        return
+      end
 
       vim.api.nvim_set_hl(0, "TelescopeMatching", { link = "Special" })
       vim.api.nvim_set_hl(0, "TelescopeSelection", { link = "Visual" })
@@ -208,7 +215,7 @@ function M.autocmds()
       vim.api.nvim_set_hl(0, "TelescopePromptCounter", { link = "NonText" })
 
       -- vim.api.nvim_del_augroup_by_id(group)
-    end
+    end,
   })
 end
 
