@@ -186,6 +186,10 @@ function M.set_groups()
     -- flash
     FlashLabel = { ctermfg = "lightgreen", reverse = true },
     FlashMatch = { link = "Normal" },
+
+    -- nvim 0.10
+    String   = {},
+    Function = {},
   }
 
   for group, hl in pairs(groups) do
