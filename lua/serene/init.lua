@@ -190,6 +190,8 @@ function M.set_groups()
     -- nvim 0.10
     String        = {},
     Function      = {},
+    Delimiter     = {},
+    Operator      = {},
     ["@variable"] = {},
   }
 
