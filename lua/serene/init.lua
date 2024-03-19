@@ -188,8 +188,9 @@ function M.set_groups()
     FlashMatch = { link = "Normal" },
 
     -- nvim 0.10
-    String   = {},
-    Function = {},
+    String        = {},
+    Function      = {},
+    ["@variable"] = {},
   }
 
   for group, hl in pairs(groups) do
