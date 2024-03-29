@@ -189,6 +189,7 @@ function M.set_groups()
 
     -- cmd
     CmpItemKind = { link = "Pmenu" },
+    CmpItemMenu = { link = "Comment" },
 
     -- nvim 0.10
     String        = {},
