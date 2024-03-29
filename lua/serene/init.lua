@@ -29,7 +29,7 @@ function M.set_groups()
     CurSearch        = { ctermbg = "white", ctermfg = "black", bg = "white", fg = "black" },
     IncSearch        = { link    = "CurSearch" },
     LineNr           = {},
-    CursorLine       = { ctermbg = 234, bg = "#1c1c1c" },
+    CursorLine       = { ctermbg = 235, bg = "#1c1c1c" },
     CursorLineFold   = {},
     CursorLineSign   = {},
     CursorLineNr     = { link = "CursorLine" },
@@ -186,6 +186,9 @@ function M.set_groups()
     -- flash
     FlashLabel = { ctermfg = "lightgreen", reverse = true },
     FlashMatch = { link = "Normal" },
+
+    -- cmd
+    CmpItemKind = { link = "Pmenu" },
 
     -- nvim 0.10
     String        = {},
