@@ -188,7 +188,7 @@ function M.set_groups()
     FlashMatch = { link = "Normal" },
 
     -- cmd
-    CmpItemKind = { link = "Pmenu" },
+    CmpItemKind = { link = "CursorLine" },
     CmpItemMenu = { link = "Comment" },
 
     -- nvim 0.10
