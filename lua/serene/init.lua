@@ -36,10 +36,10 @@ function M.set_groups()
     CursorColumn     = { link = "CursorLine" },
     FoldColumn       = { link    = "LineNr" },
     Folded           = { link    = "NonText" },
-    Visual           = { ctermbg = 237 },
+    Visual           = { reverse = true },
     VisualNOS        = { link    = "Visual" },
     Pmenu            = { ctermbg = "gray", ctermfg  = "black", bg = "darkgray", fg = "black" },
-    PmenuSel         = { ctermbg = "black", ctermfg = "white", bg = "black", fg = "white" },
+    PmenuSel         = { ctermbg = 237, bg = "black" },
     PmenuSbar        = {},
     PmenuThumb       = { ctermbg = "darkgray", ctermfg  = "black", bg = "darkgray", fg = "black" },
     ColorColumn      = { link    = "Pmenu" },
@@ -188,7 +188,7 @@ function M.set_groups()
     FlashMatch = { link = "Normal" },
 
     -- cmd
-    CmpItemKind = { link = "CursorLine" },
+    CmpItemKind = { ctermbg = 237, bg = "#1c1c1c" },
     CmpItemMenu = { link = "Comment" },
 
     -- nvim 0.10
