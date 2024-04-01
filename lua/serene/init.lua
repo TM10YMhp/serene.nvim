@@ -38,7 +38,7 @@ function M.set_groups()
     Folded           = { link    = "NonText" },
     Visual           = { reverse = true },
     VisualNOS        = { link    = "Visual" },
-    Pmenu            = { ctermbg = "gray", ctermfg  = "black", bg = "darkgray", fg = "black" },
+    Pmenu            = { ctermbg = 234, bg = "#1c1c1c" },
     PmenuSel         = { ctermbg = 237, bg = "black" },
     PmenuSbar        = {},
     PmenuThumb       = { ctermbg = "darkgray", ctermfg  = "black", bg = "darkgray", fg = "black" },
