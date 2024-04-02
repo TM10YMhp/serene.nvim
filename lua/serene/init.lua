@@ -25,7 +25,7 @@ function M.set_groups()
     StatusLineNC     = { link    = "Comment" },
     StatusLineTerm   = { link    = "StatusLine" },
     StatusLineTermNC = { link    = "StatusLineNC" },
-    Search           = { link    = "Pmenu" },
+    Search           = { link    = "PmenuThumb" },
     CurSearch        = { ctermbg = "white", ctermfg = "black", bg = "white", fg = "black" },
     IncSearch        = { link    = "CurSearch" },
     LineNr           = {},
@@ -42,7 +42,7 @@ function M.set_groups()
     PmenuSel         = { ctermbg = 237, bg = "black" },
     PmenuSbar        = {},
     PmenuThumb       = { ctermbg = "darkgray", ctermfg  = "black", bg = "darkgray", fg = "black" },
-    ColorColumn      = { link    = "Pmenu" },
+    ColorColumn      = { link    = "PmenuThumb" },
     SignColumn       = {},
     MatchParen       = { reverse = true },
     Title            = {},
@@ -90,7 +90,7 @@ function M.set_groups()
     NotifyDEBUGBorder = { link = "Comment" },
     NotifyTRACEBorder = { link = "Comment" },
     -- Mini
-    MiniTrailspace = { link = "PmenuSel" },
+    MiniTrailspace = { link = "PmenuThumb" },
 
     MiniJump = { link = "Comment" },
 
@@ -103,7 +103,7 @@ function M.set_groups()
 
     MiniTablineModifiedCurrent = { link = "Visual" },
     MiniTablineModifiedVisible = { link = "Visual" },
-    MiniTablineModifiedHidden  = { link = "Pmenu" },
+    MiniTablineModifiedHidden  = { link = "PmenuThumb" },
     -- Diagnostics
     DiagnosticError = { ctermfg = "white", fg = "white" },
     DiagnosticWarn  = { ctermfg = "white", fg = "white" },
@@ -123,12 +123,12 @@ function M.set_groups()
     UfoPreviewCursorLine = { link    = "CursorLine" },
 
     -- NvimTree
-    NvimTreeWindowPicker = { link = "Pmenu" },
+    NvimTreeWindowPicker = { link = "PmenuThumb" },
     -- NvimWindowPicker
     WindowPickerStatusLine   = { link = "PmenuSel" },
-    WindowPickerStatusLineNC = { link = "Pmenu" },
+    WindowPickerStatusLineNC = { link = "PmenuThumb" },
     WindowPickerWinBar       = { link = "PmenuSel" },
-    WindowPickerWinBarNC     = { link = "Pmenu" },
+    WindowPickerWinBarNC     = { link = "PmenuThumb" },
 
     -- flog
     flogHash          = { ctermfg = "darkyellow", fg = "darkyellow" },
