@@ -90,7 +90,7 @@ function M.set_groups()
     NotifyDEBUGBorder = { link = "Comment" },
     NotifyTRACEBorder = { link = "Comment" },
     -- Mini
-    MiniTrailspace = { link = "Pmenu" },
+    MiniTrailspace = { link = "PmenuSel" },
 
     MiniJump = { link = "Comment" },
 
