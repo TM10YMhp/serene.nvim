@@ -111,7 +111,7 @@ function M.set_groups()
     DiagnosticHint  = { ctermfg = "white", fg = "white" },
     DiagnosticOk    = {},
 
-    -- GitGutter
+    -- GitSigns
     GitSignsAdd    = { ctermfg = "white", fg = "white" },
     GitSignsChange = { ctermfg = "white", fg = "white" },
     GitSignsDelete = { ctermfg = "white", fg = "white" },
