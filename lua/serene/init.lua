@@ -162,7 +162,7 @@ function M.set_groups()
     BufferLineWarning           = { link = "Comment" },
 
     BufferLineBufferVisible            = { link = "BufferLineBufferSelected" },
-    BufferLineDuplicateVisible         = { link = "Comment" },
+    BufferLineDuplicateVisible         = {},
     BufferLineModifiedVisible          = { link = "Comment" },
     BufferLineErrorDiagnosticVisible   = { link = "Comment" },
     BufferLineErrorVisible             = { link = "Comment" },
