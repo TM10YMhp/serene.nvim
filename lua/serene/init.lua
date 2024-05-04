@@ -49,6 +49,9 @@ function M.set_groups()
     WinBar           = {},
     Directory        = {},
     SpecialKey       = {},
+
+    QuickFixLine     = { link = "CursorLine" },
+
     -- Diff
     DiffDelete  = { ctermfg = "red", fg = "red" },
     DiffAdd     = { ctermfg = "green", fg = "green" },
