@@ -7,7 +7,7 @@ function M.set_groups()
     NormalFloat      = { link    = "Normal" },
     NonText          = { ctermfg = "darkgray", fg = "gray" },
     Conceal          = {},
-    Comment          = { ctermfg = "gray", fg = "darkgray" },
+    Comment          = { ctermfg = 250, fg = "darkgray" },
     TabLine          = { link    = "Comment" },
     TabLineSel       = {},
     TabLineFill      = { link    = "Comment" },
@@ -36,12 +36,12 @@ function M.set_groups()
     CursorColumn     = { link = "CursorLine" },
     FoldColumn       = { link = "LineNr" },
     Folded           = { link = "NonText" },
-    Visual           = { ctermbg = 235, reverse = true },
+    Visual           = { ctermbg = 237 },
     VisualNOS        = { link = "Visual" },
-    Pmenu            = { ctermbg = 235, bg = "#1c1c1c" },
-    PmenuSel         = { ctermbg = 237, bg = "black" },
-    PmenuSbar        = {},
-    PmenuThumb       = { ctermbg = "darkgray", ctermfg  = "black", bg = "darkgray", fg = "black" },
+    Pmenu            = { ctermbg = 234, bg = "#1c1c1c" },
+    PmenuSel         = { link = "Visual" },
+    PmenuSbar        = { link = "Pmenu" },
+    PmenuThumb       = { ctermbg = 250, bg = "darkgray" },
     ColorColumn      = { link    = "PmenuThumb" },
     SignColumn       = {},
     MatchParen       = { reverse = true },
@@ -191,7 +191,7 @@ function M.set_groups()
     FlashMatch = { link = "Normal" },
 
     -- cmd
-    CmpItemKind = { ctermbg = 237, bg = "#1c1c1c" },
+    CmpItemKind = { link = "Comment" },
     CmpItemMenu = { link = "Comment" },
 
     -- nvim 0.10
