@@ -25,7 +25,7 @@ function M.set_groups()
     StatusLineNC     = { link    = "Comment" },
     StatusLineTerm   = { link    = "StatusLine" },
     StatusLineTermNC = { link    = "StatusLineNC" },
-    Search           = { ctermbg = "darkyellow", ctermfg = "black" },
+    Search           = { ctermfg = "darkyellow", reverse = true },
     CurSearch        = { link    = "IncSearch" },
     IncSearch        = { link    = "Visual" },
     LineNr           = {},
@@ -187,7 +187,7 @@ function M.set_groups()
     NeoTreeTabSeparatorInactive = { link = "Comment" },
 
     -- flash
-    FlashLabel = { ctermbg = "yellow", ctermfg = "black" },
+    FlashLabel = { ctermfg = 11, reverse = true },
     FlashMatch = { link = "Normal" },
 
     -- cmd
