@@ -36,7 +36,7 @@ function M.set_groups()
     CursorColumn     = { link = "CursorLine" },
     FoldColumn       = { link = "LineNr" },
     Folded           = { link = "NonText" },
-    Visual           = { ctermbg = 237 },
+    Visual           = { reverse = true },
     VisualNOS        = { link = "Visual" },
     Pmenu            = { ctermbg = 234, bg = "#1c1c1c" },
     PmenuSel         = { link = "Visual" },
@@ -187,7 +187,7 @@ function M.set_groups()
     NeoTreeTabSeparatorInactive = { link = "Comment" },
 
     -- flash
-    FlashLabel = { ctermfg = 11, reverse = true },
+    FlashLabel = { ctermfg = 42, reverse = true },
     FlashMatch = { link = "Normal" },
 
     -- cmd
