@@ -58,6 +58,10 @@ function M.set_groups()
     Directory        = {},
     SpecialKey       = {},
 
+    Error            = { ctermfg = c.red },
+    ErrorMsg         = { ctermfg = c.red },
+    WarningMsg       = { ctermfg = c.darkyellow },
+
     Pmenu            = { ctermbg = c.cursor },
     PmenuThumb       = { ctermbg = c.darkgray },
     PmenuSel         = { link    = "Visual" },
@@ -65,6 +69,8 @@ function M.set_groups()
 
     QuickFixLine     = { link = "CursorLine" },
     ModeMsg          = {},
+    MoreMsg          = { ctermfg = c.cyan },
+    Question         = { link    = "MoreMsg" },
 
     -- LSP
     LspSignatureActiveParameter = { link = "Comment" },
