@@ -97,16 +97,25 @@ function M.set_groups()
     diffAdded   = { link    = "DiffAdd" },
     diffRemoved = { link    = "DiffDelete" },
 
-    -- TODO: inline colors
     -- GitSigns
-    GitSignsAddPreview    = { link    = "DiffAdd" },
-    GitSignsDeletePreview = { link    = "DiffDelete" },
-    GitSignsAddInline     = { reverse = true },
-    GitSignsDeleteInline  = { reverse = true },
+    GitSignsAddPreview    = { link = "DiffAdd" },
+    GitSignsDeletePreview = { link = "DiffDelete" },
+    GitSignsAddInline     = { link = "DiffText" },
+    GitSignsDeleteInline  = { link = "DiffChange" },
 
     GitSignsAdd    = c.white,
     GitSignsChange = c.white,
     GitSignsDelete = c.white,
+
+    -- DiffView
+    DiffviewFilePanelTitle      = c.white,
+    DiffviewFilePanelCounter    = c.white,
+    DiffviewFilePanelRootPath   = c.white,
+    DiffviewFilePanelSelected   = { underline = true },
+    DiffviewFilePanelInsertions = { ctermfg = c.green },
+    DiffviewFilePanelDeletions  = { ctermfg = c.red },
+    DiffviewHash                = { ctermfg = "darkyellow" },
+    DiffviewReference           = { ctermfg = "cyan" },
 
     -- NvimUfo
     UfoFoldedFg          = c.white,
