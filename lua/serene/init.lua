@@ -3,12 +3,13 @@ local M = {}
 local c = {
   red = 1,
   green = 2,
-  yellow = 3,
   gray = 250,
   darkgray = 242,
   -- NOTE: lualine only accept gui colors
   white = { ctermfg = "white", fg = "white" },
   cyan = 42,
+  darkyellow = 214,
+  cursor = 234,
 }
 
 function M.set_groups()
@@ -36,11 +37,11 @@ function M.set_groups()
     StatusLineNC     = { link    = "Comment" },
     StatusLineTerm   = { link    = "StatusLine" },
     StatusLineTermNC = { link    = "StatusLineNC" },
-    Search           = { ctermfg = c.yellow, reverse = true },
+    Search           = { ctermfg = c.darkyellow, reverse = true },
     CurSearch        = { link    = "IncSearch" },
     IncSearch        = { link    = "Visual" },
     LineNr           = {},
-    CursorLine       = { ctermbg = 234 },
+    CursorLine       = { ctermbg = c.cursor },
     CursorLineFold   = {},
     CursorLineSign   = {},
     CursorLineNr     = { link    = "CursorLine" },
@@ -57,7 +58,7 @@ function M.set_groups()
     Directory        = {},
     SpecialKey       = {},
 
-    Pmenu            = {},
+    Pmenu            = { ctermbg = c.cursor },
     PmenuThumb       = { ctermbg = c.darkgray },
     PmenuSel         = { link    = "Visual" },
     PmenuSbar        = { link    = "Pmenu" },
@@ -86,7 +87,7 @@ function M.set_groups()
     DiffDelete  = { ctermfg = c.red },
     DiffAdd     = { ctermfg = c.green },
     DiffChange  = { ctermfg = c.cyan },
-    DiffText    = { ctermfg = 214 },
+    DiffText    = { ctermfg = c.darkyellow },
     diffAdded   = { link    = "DiffAdd" },
     diffRemoved = { link    = "DiffDelete" },
 
