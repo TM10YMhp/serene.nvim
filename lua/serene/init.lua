@@ -1,13 +1,24 @@
 local M = {}
 
+local c = {
+  red = 1,
+  green = 2,
+  yellow = 3,
+  gray = 250,
+  darkgray = 242,
+  -- NOTE: lualine only accept gui colors
+  white = { ctermfg = "white", fg = "white" },
+  cyan = 42,
+}
+
 function M.set_groups()
   -- stylua: ignore
   local groups = {
     Normal           = {},
     NormalFloat      = { link    = "Normal" },
-    NonText          = { ctermfg = "darkgray", fg = "gray" },
+    NonText          = { ctermfg = c.darkgray },
+    Comment          = { ctermfg = c.gray },
     Conceal          = {},
-    Comment          = { ctermfg = 250, fg = "darkgray" },
     TabLine          = { link    = "Comment" },
     TabLineSel       = {},
     TabLineFill      = { link    = "Comment" },
@@ -25,24 +36,20 @@ function M.set_groups()
     StatusLineNC     = { link    = "Comment" },
     StatusLineTerm   = { link    = "StatusLine" },
     StatusLineTermNC = { link    = "StatusLineNC" },
-    Search           = { ctermfg = "darkyellow", reverse = true },
+    Search           = { ctermfg = c.yellow, reverse = true },
     CurSearch        = { link    = "IncSearch" },
     IncSearch        = { link    = "Visual" },
     LineNr           = {},
-    CursorLine       = { ctermbg = 234, bg = "#1c1c1c" },
+    CursorLine       = { ctermbg = 234 },
     CursorLineFold   = {},
     CursorLineSign   = {},
-    CursorLineNr     = { link = "CursorLine" },
-    CursorColumn     = { link = "CursorLine" },
-    FoldColumn       = { link = "LineNr" },
-    Folded           = { link = "NonText" },
+    CursorLineNr     = { link    = "CursorLine" },
+    CursorColumn     = { link    = "CursorLine" },
+    FoldColumn       = { link    = "LineNr" },
+    Folded           = { link    = "NonText" },
     Visual           = { reverse = true },
-    VisualNOS        = { link = "Visual" },
-    Pmenu            = { ctermbg = 234, bg = "#1c1c1c" },
-    PmenuSel         = { link = "Visual" },
-    PmenuSbar        = { link = "Pmenu" },
-    PmenuThumb       = { ctermbg = 250, bg = "darkgray" },
-    ColorColumn      = { link    = "PmenuThumb" },
+    VisualNOS        = { link    = "Visual" },
+    ColorColumn      = { ctermbg = c.darkgray },
     SignColumn       = {},
     MatchParen       = { reverse = true },
     Title            = {},
@@ -50,27 +57,85 @@ function M.set_groups()
     Directory        = {},
     SpecialKey       = {},
 
+    Pmenu            = {},
+    PmenuThumb       = { ctermbg = c.darkgray },
+    PmenuSel         = { link    = "Visual" },
+    PmenuSbar        = { link    = "Pmenu" },
+
     QuickFixLine     = { link = "CursorLine" },
+    ModeMsg          = {},
+
+    -- LSP
+    LspSignatureActiveParameter = { link = "Comment" },
+
+    DiagnosticError = c.white,
+    DiagnosticWarn  = c.white,
+    DiagnosticInfo  = c.white,
+    DiagnosticHint  = c.white,
+    DiagnosticOk    = c.white,
+
+    -- flash
+    FlashLabel = { ctermfg = c.cyan, reverse = true },
+    FlashMatch = { link = "Normal" },
+
+    -- cmp
+    CmpItemKind = { link = "Comment" },
+    CmpItemMenu = { link = "Comment" },
 
     -- Diff
-    DiffDelete  = { ctermfg = "red", fg = "red" },
-    DiffAdd     = { ctermfg = "green", fg = "green" },
-    DiffChange  = { ctermfg = "yellow", fg = "yellow" },
-    DiffText    = { ctermfg = "darkyellow", fg = "darkyellow" },
+    DiffDelete  = { ctermfg = c.red },
+    DiffAdd     = { ctermfg = c.green },
+    DiffChange  = { ctermfg = c.cyan },
+    DiffText    = { ctermfg = 214 },
     diffAdded   = { link    = "DiffAdd" },
     diffRemoved = { link    = "DiffDelete" },
-    -- Telescope
-    TelescopeMatching      = { link = "Comment" },
-    TelescopeSelection     = { link = "CursorLine" },
-    TelescopeCounter       = { link = "Normal" },
-    TelescopePromptCounter = { link = "Normal" },
+
+    -- TODO: inline colors
     -- GitSigns
     GitSignsAddPreview    = { link    = "DiffAdd" },
     GitSignsDeletePreview = { link    = "DiffDelete" },
     GitSignsAddInline     = { reverse = true },
     GitSignsDeleteInline  = { reverse = true },
-    -- LspSignature
-    LspSignatureActiveParameter = { link = "Comment" },
+
+    GitSignsAdd    = c.white,
+    GitSignsChange = c.white,
+    GitSignsDelete = c.white,
+
+    -- NvimUfo
+    UfoFoldedFg          = c.white,
+    UfoFoldedBg          = { link = "Folded" },
+    UfoFoldedEllipsis    = { link = "Folded" },
+    UfoPreviewCursorLine = { link = "CursorLine" },
+
+    -- Mini
+    MiniTrailspace                = { ctermbg = c.red },
+    MiniCompletionActiveParameter = { link = "Comment" },
+
+    -- NOTE: same colors of terminal
+    -- flog
+    flogRef           = { ctermfg = c.cyan },
+
+    flogRefHead       = { ctermfg = "cyan" },
+    flogRefHeadArrow  = { ctermfg = "cyan" },
+    flogRefHeadBranch = { ctermfg = "green" },
+    flogHash          = { ctermfg = "darkyellow" },
+    flogDate          = { ctermfg = "darkcyan" },
+    flogAuthor        = { ctermfg = "darkgreen" },
+
+    -- vim-fugitive
+    gitKeyword = { ctermfg = "darkyellow" },
+    gitHash    = { ctermfg = "darkyellow" },
+
+    -- Telescope
+    TelescopeMatching      = { link = "Comment" },
+    TelescopeSelection     = { link = "CursorLine" },
+    TelescopeCounter       = { link = "Normal" },
+    TelescopePromptCounter = { link = "Normal" },
+
+    -- mason
+    MasonMutedBlock         = { link    = "Comment" },
+    MasonHighlightBlockBold = { reverse = true },
+
     -- Notify
     NotifyLogTitle    = { link = "Comment" },
     NotifyLogTime     = { link = "Comment" },
@@ -92,59 +157,15 @@ function M.set_groups()
     NotifyINFOBorder  = { link = "Comment" },
     NotifyDEBUGBorder = { link = "Comment" },
     NotifyTRACEBorder = { link = "Comment" },
-    -- Mini
-    MiniTrailspace = { link = "PmenuThumb" },
-
-    MiniJump = { link = "Comment" },
-
-    MiniTablineVisible = { link = "Comment" },
-
-    MiniCompletionActiveParameter = { link = "Comment" },
-
-    MiniJump2dSpot      = { link = "Comment" },
-    MiniJump2dSpotAhead = { link = "Comment" },
-
-    MiniTablineModifiedCurrent = { link = "Visual" },
-    MiniTablineModifiedVisible = { link = "Visual" },
-    MiniTablineModifiedHidden  = { link = "PmenuThumb" },
-    -- Diagnostics
-    DiagnosticError = { ctermfg = "white", fg = "white" },
-    DiagnosticWarn  = { ctermfg = "white", fg = "white" },
-    DiagnosticInfo  = { ctermfg = "white", fg = "white" },
-    DiagnosticHint  = { ctermfg = "white", fg = "white" },
-    DiagnosticOk    = {},
-
-    -- GitSigns
-    GitSignsAdd    = { ctermfg = "white", fg = "white" },
-    GitSignsChange = { ctermfg = "white", fg = "white" },
-    GitSignsDelete = { ctermfg = "white", fg = "white" },
-
-    -- NvimUfo
-    UfoFoldedFg          = { ctermfg = "white", fg = "white" },
-    UfoFoldedBg          = { link    = "Folded" },
-    UfoFoldedEllipsis    = { link    = "Folded" },
-    UfoPreviewCursorLine = { link    = "CursorLine" },
 
     -- NvimTree
     NvimTreeWindowPicker = { link = "PmenuThumb" },
+
     -- NvimWindowPicker
     WindowPickerStatusLine   = { link = "PmenuSel" },
     WindowPickerStatusLineNC = { link = "PmenuThumb" },
     WindowPickerWinBar       = { link = "PmenuSel" },
     WindowPickerWinBarNC     = { link = "PmenuThumb" },
-
-    -- flog
-    flogHash          = { ctermfg = "darkyellow", fg = "darkyellow" },
-    flogDate          = { ctermfg = "darkcyan", fg = "darkcyan" },
-    flogAuthor        = { ctermfg = "darkgreen", fg = "darkgreen" },
-    flogRef           = { ctermfg = "red", fg = "red" },
-    flogRefHead       = { ctermfg = "cyan", fg = "cyan" },
-    flogRefHeadArrow  = { ctermfg = "cyan", fg = "cyan" },
-    flogRefHeadBranch = { ctermfg = "green", fg = "green" },
-
-    -- git
-    gitKeyword = { ctermfg = "darkyellow" },
-    gitHash = { ctermfg = "darkyellow" },
 
     -- bufferline
     BufferLineBackground   = { link = "Comment" },
@@ -164,35 +185,23 @@ function M.set_groups()
     BufferLineWarningDiagnostic = { link = "Comment" },
     BufferLineWarning           = { link = "Comment" },
 
-    BufferLineBufferVisible            = { link = "BufferLineBufferSelected" },
+    BufferLineBufferVisible            = {},
     BufferLineDuplicateVisible         = {},
-    BufferLineModifiedVisible          = { link = "Comment" },
-    BufferLineErrorDiagnosticVisible   = { link = "Comment" },
-    BufferLineErrorVisible             = { link = "Comment" },
-    BufferLineHintDiagnosticVisible    = { link = "Comment" },
-    BufferLineHintVisible              = { link = "Comment" },
-    BufferLineInfoDiagnosticVisible    = { link = "Comment" },
-    BufferLineInfoVisible              = { link = "Comment" },
-    BufferLineWarningDiagnosticVisible = { link = "Comment" },
-    BufferLineWarningVisible           = { link = "Comment" },
-
-    -- mason
-    MasonMutedBlock         = { link    = "Comment" },
-    MasonHighlightBlockBold = { reverse = true },
+    BufferLineModifiedVisible          = {},
+    BufferLineErrorDiagnosticVisible   = {},
+    BufferLineErrorVisible             = {},
+    BufferLineHintDiagnosticVisible    = {},
+    BufferLineHintVisible              = {},
+    BufferLineInfoDiagnosticVisible    = {},
+    BufferLineInfoVisible              = {},
+    BufferLineWarningDiagnosticVisible = {},
+    BufferLineWarningVisible           = {},
 
     -- neo-tree
     NeoTreeCursorLine           = { link = "CursorLine" },
     NeoTreeTabInactive          = { link = "Comment" },
     NeoTreeTabSeparatorActive   = { link = "Comment" },
     NeoTreeTabSeparatorInactive = { link = "Comment" },
-
-    -- flash
-    FlashLabel = { ctermfg = 42, reverse = true },
-    FlashMatch = { link = "Normal" },
-
-    -- cmd
-    CmpItemKind = { link = "Comment" },
-    CmpItemMenu = { link = "Comment" },
 
     -- nvim 0.10
     String        = {},
