@@ -7,7 +7,7 @@ local c = {
   darkgray = 242,
   -- NOTE: lualine only accept gui colors
   white = { ctermfg = "white", fg = "white" },
-  cyan = 42,
+  cyan = 14, -- 42?
   darkyellow = 214,
   cursor = 234,
 }
@@ -90,12 +90,13 @@ function M.set_groups()
     CmpItemMenu = { link = "Comment" },
 
     -- Diff
-    DiffDelete  = { ctermfg = c.red },
-    DiffAdd     = { ctermfg = c.green },
-    DiffChange  = { ctermfg = c.cyan },
-    DiffText    = { ctermfg = c.darkyellow },
-    diffAdded   = { link    = "DiffAdd" },
-    diffRemoved = { link    = "DiffDelete" },
+    DiffDelete = { ctermfg = c.red },
+    DiffAdd    = { ctermfg = c.green },
+    DiffChange = { ctermfg = c.cyan },
+    DiffText   = { ctermfg = c.darkyellow },
+    Added      = { link    = "DiffAdd" },
+    Removed    = { link    = "DiffDelete" },
+    Changed    = { link    = "DiffChange" },
 
     -- GitSigns
     GitSignsAddPreview    = { link = "DiffAdd" },
