@@ -81,10 +81,6 @@ function M.set_groups()
     DiagnosticHint  = c.white,
     DiagnosticOk    = c.white,
 
-    -- flash
-    FlashLabel = { ctermfg = c.cyan, reverse = true },
-    FlashMatch = { link = "Normal" },
-
     -- cmp
     CmpItemKind = { link = "Comment" },
     CmpItemMenu = { link = "Comment" },
@@ -125,7 +121,9 @@ function M.set_groups()
     UfoPreviewCursorLine = { link = "CursorLine" },
 
     -- Mini
-    MiniTrailspace                = { ctermbg = c.red },
+    MiniJump       = { ctermfg = c.cyan, reverse = true },
+    MiniJump2dSpot = { ctermfg = c.cyan, reverse = true },
+    MiniTrailspace = { ctermbg = c.red },
     MiniCompletionActiveParameter = { link = "Comment" },
 
     -- NOTE: same colors of terminal
