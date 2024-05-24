@@ -121,10 +121,14 @@ function M.set_groups()
     UfoPreviewCursorLine = { link = "CursorLine" },
 
     -- Mini
-    MiniJump       = { ctermfg = c.cyan, reverse = true },
+    MiniJump       = { ctermfg = c.cyan },
     MiniJump2dSpot = { ctermfg = c.cyan, reverse = true },
     MiniTrailspace = { ctermbg = c.red },
     MiniCompletionActiveParameter = { link = "Comment" },
+
+    -- eyeliner
+    EyelinerPrimary   = { ctermfg = c.darkyellow },
+    EyelinerSecondary = { ctermfg = c.cyan },
 
     -- NOTE: same colors of terminal
     -- flog
