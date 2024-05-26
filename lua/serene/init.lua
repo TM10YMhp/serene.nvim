@@ -5,8 +5,6 @@ local c = {
   green = 2,
   gray = 250,
   darkgray = 242,
-  -- NOTE: lualine only accept gui colors
-  white = { ctermfg = "white", fg = "white" },
   cyan = 14, -- 42?
   darkyellow = 214,
   cursor = 234,
@@ -47,7 +45,7 @@ function M.set_groups()
     CursorLineNr     = { link    = "CursorLine" },
     CursorColumn     = { link    = "CursorLine" },
     FoldColumn       = { link    = "LineNr" },
-    Folded           = { link    = "NonText" },
+    Folded           = {},
     Visual           = { reverse = true },
     VisualNOS        = { link    = "Visual" },
     ColorColumn      = { ctermbg = c.darkgray },
@@ -75,11 +73,16 @@ function M.set_groups()
     -- LSP
     LspSignatureActiveParameter = { link = "Comment" },
 
-    DiagnosticError = c.white,
-    DiagnosticWarn  = c.white,
-    DiagnosticInfo  = c.white,
-    DiagnosticHint  = c.white,
-    DiagnosticOk    = c.white,
+    DiagnosticError = {},
+    DiagnosticWarn  = {},
+    DiagnosticInfo  = {},
+    DiagnosticHint  = {},
+    DiagnosticOk    = {},
+
+    -- NvimUfo
+    UfoFoldedFg          = {},
+    UfoFoldedBg          = { link = "CursorLine" },
+    UfoFoldedEllipsis    = { link = "NonText" },
 
     -- cmp
     CmpItemKind = { link = "Comment" },
@@ -100,25 +103,19 @@ function M.set_groups()
     GitSignsAddInline     = { link = "DiffText" },
     GitSignsDeleteInline  = { link = "DiffChange" },
 
-    GitSignsAdd    = c.white,
-    GitSignsChange = c.white,
-    GitSignsDelete = c.white,
+    GitSignsAdd    = {},
+    GitSignsChange = {},
+    GitSignsDelete = {},
 
     -- DiffView
-    DiffviewFilePanelTitle      = c.white,
-    DiffviewFilePanelCounter    = c.white,
-    DiffviewFilePanelRootPath   = c.white,
+    DiffviewFilePanelTitle      = { link = "Ignore" },
+    DiffviewFilePanelCounter    = { link = "Ignore" },
+    DiffviewFilePanelRootPath   = { link = "Ignore" },
     DiffviewFilePanelSelected   = { underline = true },
     DiffviewFilePanelInsertions = { ctermfg = c.green },
     DiffviewFilePanelDeletions  = { ctermfg = c.red },
     DiffviewHash                = { ctermfg = "darkyellow" },
     DiffviewReference           = { ctermfg = "cyan" },
-
-    -- NvimUfo
-    UfoFoldedFg          = c.white,
-    UfoFoldedBg          = { link = "Folded" },
-    UfoFoldedEllipsis    = { link = "Folded" },
-    UfoPreviewCursorLine = { link = "CursorLine" },
 
     -- Mini
     MiniJump       = { ctermfg = c.cyan },
