@@ -53,6 +53,7 @@ function M.set_groups()
     MatchParen       = { reverse = true },
     Title            = {},
     WinBar           = {},
+    WinBarNC         = {},
     Directory        = {},
     SpecialKey       = {},
 
