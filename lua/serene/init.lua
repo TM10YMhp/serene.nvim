@@ -82,8 +82,9 @@ function M.set_groups()
 
     -- NvimUfo
     UfoFoldedFg          = {},
-    UfoFoldedBg          = { link = "CursorLine" },
     UfoFoldedEllipsis    = { link = "NonText" },
+    UfoPreviewCursorLine = { link = "CursorLine" },
+    UfoPreviewWinBar     = { link = "CursorLine"},
 
     -- cmp
     CmpItemKind = { link = "Comment" },
