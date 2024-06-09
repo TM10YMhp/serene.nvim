@@ -99,6 +99,10 @@ function M.set_groups()
     Removed    = { link    = "DiffDelete" },
     Changed    = { link    = "DiffChange" },
 
+    -- Git Messenger
+    diffAdded   = { link = "DiffAdd" },
+    diffRemoved = { link = "DiffDelete" },
+
     -- GitSigns
     GitSignsAddPreview    = { link = "DiffAdd" },
     GitSignsDeletePreview = { link = "DiffDelete" },
