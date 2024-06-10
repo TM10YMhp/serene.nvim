@@ -87,8 +87,12 @@ function M.set_groups()
     UfoPreviewWinBar     = { link = "CursorLine"},
 
     -- cmp
-    CmpItemKind = { link = "Comment" },
-    CmpItemMenu = { link = "Comment" },
+    CmpItemKind        = { link = "Comment" },
+    CmpItemMenu        = { link = "Comment" },
+
+    CmpItemKindCodeium = { link = "Comment" },
+    CmpItemKindCopilot = { link = "Comment" },
+    CmpItemKindTabNine = { link = "Comment" },
 
     -- Diff
     DiffDelete = { ctermfg = c.red },
