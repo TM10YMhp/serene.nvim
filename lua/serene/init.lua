@@ -113,9 +113,18 @@ function M.set_groups()
     GitSignsAddInline     = { link = "DiffText" },
     GitSignsDeleteInline  = { link = "DiffChange" },
 
-    GitSignsAdd    = {},
-    GitSignsChange = {},
-    GitSignsDelete = {},
+    GitSignsAdd          = {},
+    GitSignsChange       = {},
+    GitSignsDelete       = {},
+    GitSignsTopdelete    = {},
+    GitSignsChangedelete = {},
+    GitSignsUntracked    = {},
+
+    GitSignsStagedAdd          = { link = "NonText" },
+    GitSignsStagedChange       = { link = "NonText" },
+    GitSignsStagedDelete       = { link = "NonText" },
+    GitSignsStagedTopdelete    = { link = "NonText" },
+    GitSignsStagedChangedelete = { link = "NonText" },
 
     -- DiffView
     DiffviewFilePanelTitle      = { link = "Ignore" },
