@@ -238,6 +238,10 @@ function M.set_groups()
     NeoTreeTabSeparatorActive   = { link = "Comment" },
     NeoTreeTabSeparatorInactive = { link = "Comment" },
 
+    -- treesitter-context
+    TreesitterContext           = { link = "NonText" },
+    TreesitterContextLineNumber = { link = "NonText" },
+
     -- nvim 0.10
     String        = {},
     Function      = {},
