@@ -35,13 +35,13 @@ function M.set_groups()
     StatusLineNC     = { link    = "Comment" },
     StatusLineTerm   = { link    = "StatusLine" },
     StatusLineTermNC = { link    = "StatusLineNC" },
-    Search           = { ctermfg = c.darkyellow, reverse = true },
+    Search           = { reverse = true },
+    IncSearch        = { ctermfg = c.darkyellow, reverse = true },
     CurSearch        = { link    = "IncSearch" },
-    IncSearch        = { link    = "Visual" },
     LineNr           = {},
     CursorLine       = { ctermbg = c.cursor },
-    CursorLineFold   = {},
-    CursorLineSign   = {},
+    CursorLineFold   = { link    = "CursorLine" },
+    CursorLineSign   = { link    = "CursorLine" },
     CursorLineNr     = { link    = "CursorLine" },
     CursorColumn     = { link    = "CursorLine" },
     FoldColumn       = { link    = "LineNr" },
@@ -148,7 +148,7 @@ function M.set_groups()
 
     -- NOTE: same colors of terminal
     -- flog
-    flogRef           = { ctermfg = c.cyan },
+    flogRef           = { ctermfg = "red" },
 
     flogRefHead       = { ctermfg = "cyan" },
     flogRefHeadArrow  = { ctermfg = "cyan" },
