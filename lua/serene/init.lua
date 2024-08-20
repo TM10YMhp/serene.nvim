@@ -35,8 +35,11 @@ function M.set_groups()
     StatusLineNC     = { link    = "Comment" },
     StatusLineTerm   = { link    = "StatusLine" },
     StatusLineTermNC = { link    = "StatusLineNC" },
-    Search           = { reverse = true },
-    IncSearch        = { ctermfg = c.darkyellow, reverse = true },
+    -- Search           = { link = "Visual" },
+    -- IncSearch        = { ctermfg = c.darkyellow, reverse = true },
+    -- NOTE: highlight match in substitude
+    Search           = { ctermfg = c.darkyellow, reverse = true },
+    IncSearch        = { link = "Visual" },
     CurSearch        = { link    = "IncSearch" },
     LineNr           = {},
     CursorLine       = { ctermbg = c.cursor },
