@@ -245,6 +245,10 @@ function M.set_groups()
     TreesitterContext           = { link = "NonText" },
     TreesitterContextLineNumber = { link = "NonText" },
 
+    -- satellite
+    SatelliteBar = { link = "CursorLine" },
+    SatelliteCursor = { link = "Visual" },
+
     -- nvim 0.10
     String        = {},
     Function      = {},
@@ -278,6 +282,9 @@ function M.autocmds()
       vim.api.nvim_set_hl(0, "TelescopeSelection", { link = "Visual" })
       vim.api.nvim_set_hl(0, "TelescopeCounter", { link = "NonText" })
       vim.api.nvim_set_hl(0, "TelescopePromptCounter", { link = "NonText" })
+
+      vim.api.nvim_set_hl(0, "SatelliteBar", { link = "Visual" })
+      vim.api.nvim_set_hl(0, "SatelliteCursor", { link = "NonText" })
 
       -- vim.api.nvim_del_augroup_by_id(group)
     end,
