@@ -249,6 +249,10 @@ function M.set_groups()
     SatelliteBar = { link = "CursorLine" },
     SatelliteCursor = { link = "Visual" },
 
+    -- scrollview
+    ScrollView = { link = "CursorLine" },
+    ScrollViewCursor = { link = "Visual" },
+
     -- nvim 0.10
     String        = {},
     Function      = {},
