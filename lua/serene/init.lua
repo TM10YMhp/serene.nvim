@@ -116,12 +116,12 @@ function M.set_groups()
     GitSignsAddInline     = { link = "DiffText" },
     GitSignsDeleteInline  = { link = "DiffChange" },
 
-    GitSignsAdd          = {},
-    GitSignsChange       = {},
-    GitSignsDelete       = {},
-    GitSignsTopdelete    = {},
-    GitSignsChangedelete = {},
-    GitSignsUntracked    = {},
+    GitSignsAdd          = { link = "Ignore" },
+    GitSignsChange       = { link = "Ignore" },
+    GitSignsDelete       = { link = "Ignore" },
+    GitSignsTopdelete    = { link = "Ignore" },
+    GitSignsChangedelete = { link = "Ignore" },
+    GitSignsUntracked    = { link = "Ignore" },
 
     GitSignsStagedAdd          = { link = "NonText" },
     GitSignsStagedChange       = { link = "NonText" },
