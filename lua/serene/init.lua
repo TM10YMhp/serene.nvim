@@ -145,6 +145,17 @@ function M.set_groups()
     MiniTrailspace = { ctermbg = c.red },
     MiniCompletionActiveParameter = { link = "Comment" },
 
+    MiniStatuslineDevinfo     = { link = "Normal"},
+    MiniStatuslineFileinfo    = { link = "Normal"},
+    MiniStatuslineFilename    = { link = "Normal"},
+    MiniStatuslineInactive    = { link = "Normal"},
+    MiniStatuslineModeOther   = { link = "Normal"},
+    MiniStatuslineModeInsert  = { link = "Normal"},
+    MiniStatuslineModeNormal  = { link = "Normal"},
+    MiniStatuslineModeVisual  = { link = "Normal"},
+    MiniStatuslineModeCommand = { link = "Normal"},
+    MiniStatuslineModeReplace = { link = "Normal"},
+
     -- eyeliner
     EyelinerPrimary   = { ctermfg = c.darkyellow },
     EyelinerSecondary = { ctermfg = c.cyan },
